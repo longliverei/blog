@@ -1,0 +1,57 @@
+.home {
+    max-width: 1280px;
+    margin: auto;
+
+    .posts {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 150px;
+
+        .post {
+            display: flex;
+            gap: 100px;
+            &:nth-child(2n+1) {
+                flex-direction: row-reverse;
+            }
+
+            .img {
+                flex: 2;
+
+                img {
+                    width: 100%;
+                    max-height: 400px;
+                    object-fit: cover;
+                }
+            }
+
+            .content {
+                flex: 3;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .link {
+                    text-decoration: none;
+                    color: inherit;
+                }
+
+                button {
+                    width: max-content;
+                    padding: 10px 20px;
+                    border: none;
+                    cursor: pointer;
+                    background-color: white;
+                    border: 1px solid black;
+
+                    &:hover {
+                        border: 1px solid white;
+                        background-color: black;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+
+}
