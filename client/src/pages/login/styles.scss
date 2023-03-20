@@ -1,0 +1,28 @@
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+
+        input {
+            margin-bottom: 30px;
+        }
+
+        p {
+            font-size: 12px;
+            text-align: center;
+            color: red;
+        }
+
+        span {
+            font-size: 12px;
+            text-align: center;
+        }
+    }
+}
