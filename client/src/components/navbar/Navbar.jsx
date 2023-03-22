@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './styles.scss';
 
 export const Navbar = () => {
@@ -12,7 +13,9 @@ export const Navbar = () => {
                 </div>
                 <div className='user-area'>
                     <div className='create-post user-margin'>
+                        <Link to='/write'>
                         <button>Create post</button>
+                        </Link>
                     </div>
                     <div className='user-img user-margin'>
                         USER IMG AREA
