@@ -34,6 +34,11 @@
         }
     }
 
+    .post-content {
+        display: flex;
+        flex-direction: column;
+    }
+
     .menu {
         flex: 2;
     }
