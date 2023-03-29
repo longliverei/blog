@@ -6,7 +6,7 @@ export const getPosts = (req, res) => {
     db.query(q, (err, data) => {
         if (err) return res.send(err);
 
-        return res.status(200).json(data)
+        return res.status(200).json(data);
     })
 };
 
