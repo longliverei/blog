@@ -14,7 +14,7 @@ export const Write = () => {
                     <ReactQuill className='editor' theme="snow" value={value} onChange={setValue} />
                 </div>
             </div>
-            <div className="menu">
+            <div className="menu-write">
                 <div className="item">
                     <h1>Publish</h1>
                     <span>
@@ -33,28 +33,16 @@ export const Write = () => {
                 <div className="item">
                     <h1>Category</h1>
                     <div className='cat'>
+                        <input type="radio" name="cat" id="movies" value="movies"/>
+                        <label htmlFor="movies">Movies</label>
+                    </div>
+                    <div className='cat'>
                         <input type="radio" name="cat" id="art" value="art"/>
                         <label htmlFor="art">Art</label>
                     </div>
                     <div className='cat'>
-                        <input type="radio" name="cat" id="science" value="science"/>
-                        <label htmlFor="science">Science</label>
-                    </div>
-                    <div className='cat'>
-                        <input type="radio" name="cat" id="technology" value="technology"/>
-                        <label htmlFor="technology">Technology</label>
-                    </div>
-                    <div className='cat'>
-                        <input type="radio" name="cat" id="cinema" value="cinema"/>
-                        <label htmlFor="cinema">Cinema</label>
-                    </div>
-                    <div className='cat'>
-                        <input type="radio" name="cat" id="Design" value="Design"/>
-                        <label htmlFor="Design">Design</label>
-                    </div>
-                    <div className='cat'>
-                        <input type="radio" name="cat" id="food" value="food"/>
-                        <label htmlFor="food">Food</label>
+                        <input type="radio" name="cat" id="literature" value="literature"/>
+                        <label htmlFor="literature">Literature</label>
                     </div>
                 </div>
             </div>

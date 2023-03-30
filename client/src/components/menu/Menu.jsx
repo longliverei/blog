@@ -1,25 +1,22 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router";
 import './styles.scss';
+import { Link } from "react-router-dom";
 
-export const Menu = () => {
+export const Menu = ({cat}) => {
    const [posts, setPosts] = useState([]);
-
-   const location = useLocation();
-   const postId = location.pathname.split("/")[2];
 
    useEffect(() => {
     const fetchData = async () => {
         try {
-            const res = await axios.get(`http://localhost:8000/api/posts/`);
+            const res = await axios.get(`http://localhost:8000/api/posts/?cat=${cat}`);
             setPosts(res.data);
         } catch (err) {
             console.log(err);
         }
     }
     fetchData();
-   }, []);
+   }, [cat]);
 
     return (
         <div className="menu">
@@ -28,7 +25,9 @@ export const Menu = () => {
                 <div className="post" key={post.id}>
                     <img src={post.img} alt='' />
                     <h2>{post.title}</h2>
+                    <Link className="link" to={`/post/${post.id}`}>
                     <button>Read More</button>
+                    </Link>
                 </div>
             ))}
         </div>

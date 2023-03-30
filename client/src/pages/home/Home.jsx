@@ -57,7 +57,7 @@ export const Home = () => {
                     </div>
                     <div className="post-text">
                         <h1>{post.title}</h1>
-                        <p>{post.desc}</p>
+                        <p className="text">{post.desc}</p>
                         <Link className="link" to={`/post/${post.id}`}>
                         <button>Read More</button>
                         </Link>
