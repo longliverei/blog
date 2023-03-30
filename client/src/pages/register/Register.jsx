@@ -35,7 +35,7 @@ export const Register = () => {
                 <input required type='text' placeholder='Username' name='username' onChange={handleChange} />
                 <input required type='email' placeholder='Email' name='email' onChange={handleChange} />
                 <input required type='password' placeholder='Password' name='password' onChange={handleChange} />
-                <button onClick={handleSubmit}>Register</button>
+                <button onClick={handleSubmit} className="button">Register</button>
                 { err && <p>{err}</p>}
                 <span>Already have an account? <Link to='/login'>Login</Link></span>
             </form>

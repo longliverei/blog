@@ -19,14 +19,12 @@ export const Navbar = () => {
                 <p>Don't let them control your toughts</p>
                 <div className='user-area'>
                     <div className='create-post user-margin'>
-                        <Link to='/write'>
-                        {currentUser ? <button className="button">Create post</button> : null}
-                        </Link>
+                        {currentUser ? <Link to='/write'><button className="button">Create post</button></Link> : null}
                     </div>
                     <div className='user-img user-margin'>
-                        IMG
+                        {currentUser ? currentUser.username : null}
                     </div>
-                    {currentUser ? (<span className="user-margin" onClick={logout}>Logout</span>) : (<Link to="/login">Login</Link>)}
+                    {currentUser ? (<span className="user-margin" onClick={logout}>Logout</span>) : (<Link to="/login"><span className="user-margin">Login</span></Link>)}
                 </div>
             </div>
         </header>
