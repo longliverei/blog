@@ -16,10 +16,11 @@ export const Navbar = () => {
                     <img src={Hannya} alt="hannya icon" className="logo"/>
                     </Link>
                 </div>
+                <p>Don't let them control your toughts</p>
                 <div className='user-area'>
                     <div className='create-post user-margin'>
                         <Link to='/write'>
-                        <button className="button">Create post</button>
+                        {currentUser ? <button className="button">Create post</button> : null}
                         </Link>
                     </div>
                     <div className='user-img user-margin'>

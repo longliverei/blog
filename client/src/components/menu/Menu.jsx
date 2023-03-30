@@ -1,33 +1,25 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router";
 import './styles.scss';
 
 export const Menu = () => {
-    const posts = [
-        {
-            id: 1,
-            title: 'Lorem ipsum dolor sit amet.',
-            desc: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, exercitationem?',
-            img: 'https://culturainglesacuritiba.com.br/wp-content/uploads/2020/09/outono-na-inglaterra.png'
-        },
-        {
-            id: 2,
-            title: 'Lorem ipsum dolor sit amet.',
-            desc: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, exercitationem?',
-            img: 'https://culturainglesacuritiba.com.br/wp-content/uploads/2020/09/outono-na-inglaterra.png'
-        },
-        {
-            id: 3,
-            title: 'Lorem ipsum dolor sit amet.',
-            desc: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, exercitationem?',
-            img: 'https://culturainglesacuritiba.com.br/wp-content/uploads/2020/09/outono-na-inglaterra.png'
-        },
-        {
-            id: 4,
-            title: 'Lorem ipsum dolor sit amet.',
-            desc: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, exercitationem?',
-            img: 'https://culturainglesacuritiba.com.br/wp-content/uploads/2020/09/outono-na-inglaterra.png'
+   const [posts, setPosts] = useState([]);
+
+   const location = useLocation();
+   const postId = location.pathname.split("/")[2];
+
+   useEffect(() => {
+    const fetchData = async () => {
+        try {
+            const res = await axios.get(`http://localhost:8000/api/posts/`);
+            setPosts(res.data);
+        } catch (err) {
+            console.log(err);
         }
-    ]
+    }
+    fetchData();
+   }, []);
 
     return (
         <div className="menu">

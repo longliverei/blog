@@ -3,4 +3,11 @@ body {
   padding: 0;
   color: white;
   background: black;
+  font-family: 'Archivo', sans-serif;
+  
+  #root {
+    display: flex;
+    flex-direction: column;
+  }
+
 }

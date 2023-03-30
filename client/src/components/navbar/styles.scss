@@ -2,7 +2,11 @@
 
 .navbar {
     border-bottom: 1px solid white;
-    margin-bottom: 20px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    background-color: black;
+    z-index: 1;
 
     .navbar-content {
         display: flex;
@@ -14,6 +18,11 @@
         .logo {
             width: 50px;
         }
+    }
+
+    p {
+        margin: 0px 20px;
+        font-size: 18px;
     }
     
     .user-area {
