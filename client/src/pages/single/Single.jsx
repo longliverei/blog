@@ -6,6 +6,7 @@ import { AuthContext } from '../../context/authContext';
 import './styles.scss';
 import Delete from "../../assets/delete.png";
 import Edit from "../../assets/edit.png";
+import DOMPurify from "dompurify";
 
 export const Single = () => {
     const [post, setPost] = useState([]);
@@ -39,7 +40,7 @@ export const Single = () => {
     return (
         <div className='single'>
             <div className="content">
-                <img src={post?.img} alt="" />
+                <img src={`/src/upload/${post?.img}`} alt="" />
                 <div className="user">
                     {post.userImg && <img  className="user-img" src={post.userimg} alt="" />}
                     <div className="info">
@@ -47,7 +48,7 @@ export const Single = () => {
                         <p>{post.mydate}</p>
                     </div>
                     {currentUser ? currentUser.username == post.username && <div className="edit">
-                        <Link to={`/write?edit=2`}>
+                        <Link to={`/write?edit=2`} state={post}>
                         <img className="icon" alt="edit icon" src={Edit} />
                         </Link>
                         <img src={Delete} alt="delete icon" className="icon" onClick={handleDelete} />
@@ -55,7 +56,9 @@ export const Single = () => {
                 </div>
                     <div className="post-content">
                         <h1>{post.title}</h1>
-                        <p className="post-text">{post.desc}</p>
+                        <p className="post-text" dangerouslySetInnerHTML={{
+                            __html: DOMPurify.sanitize(post.desc),
+                        }}></p>
                     </div>
             </div>
             <Menu cat={post.cat} />
