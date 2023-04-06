@@ -35,7 +35,7 @@ export const Write = () => {
                 desc: value,
                 cat,
                 img: file ? imgUrl : ""
-            })
+            }, { withCredentials: true })
             : await axios.post(`http://localhost:8000/api/posts/`, {
                 title,
                 desc: value,
