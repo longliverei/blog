@@ -1,6 +1,6 @@
 # <center>:cat: Blog :cat:
 Create your account and write!
-You can delete and edit your own posts.
+You can delete and edit only your own posts.
 
 <img src="https://i.imgur.com/ocp0eST.jpg" width="400"><img src="https://i.imgur.com/KnVpcWr.jpg" width="400">
 <img src="https://i.imgur.com/F000z7L.jpg" width="400"><img src="https://i.imgur.com/V8KVdTa.jpg" width="400">
