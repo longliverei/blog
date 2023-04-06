@@ -1,8 +1,7 @@
 # <center>:cat: Blog :cat:
 
 
-<img src="https://i.imgur.com/ocp0eST.jpg" width="400">
-<img src="https://i.imgur.com/KnVpcWr.jpg" width="400">
+<img src="https://i.imgur.com/ocp0eST.jpg" width="400"><img src="https://i.imgur.com/KnVpcWr.jpg" width="400">
 <img src="https://i.imgur.com/F000z7L.jpg" width="400">
 <img src="https://i.imgur.com/j3H9Ue4.jpg" width="400">
 <img src="https://i.imgur.com/4cpwnAr.jpg" width="400">
@@ -30,6 +29,7 @@ MySQL
 
 ### Env variables
 In the api folder of this project, create a `.env` file with the keys and values located on `.envexample`
+Default port used on api: 8000.
 
 ### MySQL
 Create two tables using the info on mysql.sql file on api folder.
