@@ -46,5 +46,5 @@ Frontend start
     npm run dev
 
 # License
-This project is under MIT license
+This project is under [MIT](https://github.com/longliverei/blog/blob/main/LICENSE) license
     
