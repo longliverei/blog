@@ -13,7 +13,7 @@ You can delete and edit only your own posts.
 Reactjs with SASS for styling, React State for state manipulation and React Context to use user information.
 
 ### Api:
-Nodejs with Express, MySQL for database, JWT and cookies for authentication and session check.
+Nodejs with Express, Axios for HTTP requests, MySQL for database, JWT and cookies for authentication and session check.
 
 ## Tutorial
 
